@@ -1,19 +1,106 @@
 * {
     padding: 0;
     margin: 0;
-    color: gray;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
     background-color: hsl(233, 47%, 7%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
 }
 
+p {
+    font-family: 'Lexend Deca', sans-serif;
+}
 
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: hsl(244, 38%, 16%);
+    width: 90%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transform: scale(.80);
+}
+
+#preview-img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tinted-img {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.tinted-img #img-tinter {
+    background-color: hsla(278, 86%, 35%, 0.5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#preview-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+#preview-title span {
+    color:  hsl(277, 64%, 61%);
+}
+
+#preview-desc {
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 75%;
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.company-stats {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: .25rem
+}
+
+.company-stats:last-child {
+    margin-bottom: 3rem;
+}
+
+.stat-title {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px; 
+    font-weight: 400;  
+}
 
 .attribution { 
-    font-size: 11px; text-align: center;
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%)
+}
+
+@media (min-width: 390px) {
+    .preview-card {
+        transform: scale(1);
+    }
 }
