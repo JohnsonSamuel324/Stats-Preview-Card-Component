@@ -145,7 +145,7 @@ p {
     }
     .card-stats {
         display: flex;
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
     }
     .tinted-img {
@@ -186,4 +186,5 @@ p {
         width: 80%;
         margin-bottom: 4rem;
     }
+
 }
