@@ -24,7 +24,6 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1rem;
     background-color: hsl(244, 38%, 16%);
     width: 90%;
     border-bottom-left-radius: 12px;
@@ -32,7 +31,11 @@ p {
     transform: scale(.80);
 }
 
-#preview-img {
+#desktop-img {
+    display: none;
+}
+
+.preview-img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 6px;
@@ -41,7 +44,7 @@ p {
 
 .tinted-img {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .tinted-img #img-tinter {
@@ -54,10 +57,19 @@ p {
     border-top-right-radius: 6px;
 }
 
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
 #preview-title {
     color: #ffffff;
-    font-size: 1.5rem;
-    width: 70%;
+    font-size: 1.75rem;
+    width: 75%;
 }
 
 #preview-title span {
@@ -66,6 +78,7 @@ p {
 
 #preview-desc {
     color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
     width: 75%;
     font-size: 15px;
     margin-bottom: 1.5rem;
@@ -79,7 +92,7 @@ p {
 }
 
 .company-stats:last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .stat-title {
@@ -102,5 +115,75 @@ p {
 @media (min-width: 390px) {
     .preview-card {
         transform: scale(1);
+    }
+}
+@media (min-width: 768px) {
+    .preview-card {
+        width: 75%;
+    }
+}
+@media (min-width: 1024px) {
+    .preview-card {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        width: 90%;
+        align-items: start;
+    }
+    .card-info {
+        order: -1;
+        height: 100%;
+        justify-content: center;
+        align-items: start;
+        text-align: start;
+        margin: 0 4rem;
+    }
+    #preview-title {
+        width: 90%;
+    }
+    #preview-desc {
+        width: 95%;
+    }
+    .card-stats {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .tinted-img {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    #mobile-img {
+        display: none;
+    }
+    #desktop-img {
+        display: block;
+    }
+    .tinted-img .preview-img {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 6px;
+    }
+    .company-stats {
+        margin-bottom: 0;
+        gap: .5rem;
+    }
+    .company-stats:last-child {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 1440px) {
+    .preview-card {
+        width: 80%;
+    }
+    .card-info {
+        gap: 2rem;
+    }
+    #preview-title {
+        font-size: 2.5rem;
+    }
+    #preview-desc {
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 4rem;
     }
 }
